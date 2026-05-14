@@ -1,0 +1,20 @@
+{
+  "candidateId": "candidate1",
+  "isSoftwareEngineer": true,
+  "resumeFilePath": "/Users/karanshah/Documents/Documents/KaranMacBackup/Resume/job-autopilot/MasterResumeDocxKaran.docx",
+  "jobSearchCriteria": {
+    "keywords": [
+        "Software Engineer"
+    ],
+    "locations": [
+      { "city": "", "country": "IN" }
+    ],
+    "experienceLevel": [
+      { "level": "senior" },
+      { "level": "lead" }
+    ],
+    "jobType": ["full-time"],
+    "workModes": ["remote"],
+    "pageSize": 1
+  }
+}

@@ -1,0 +1,1 @@
+{"version":3,"file":"IJobSource.d.ts","sourceRoot":"","sources":["IJobSource.ts"],"names":[],"mappings":"AAAA,OAAO,KAAK,EAAE,GAAG,EAAE,MAAM,kBAAkB,CAAC;AAC5C,OAAO,KAAK,EAAC,cAAc,EAAC,MAAM,6BAA6B,CAAC;AAEhE,MAAM,WAAW,UAAU;IAEvB,YAAY,CAAC,cAAc,EAAE,cAAc,GAAG,OAAO,CAAC,GAAG,EAAE,CAAC,CAAC;CAChE"}

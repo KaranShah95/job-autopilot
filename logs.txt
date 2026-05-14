@@ -1,0 +1,1222 @@
+/usr/local/bin/node ./dist/index.js
+[dotenv@17.3.1] injecting env (3) from .env -- tip: 🔐 prevent committing .env to code: https://dotenvx.com/precommit
+[INFO] Loading app config from: ./appConfig.json
+[INFO] app config loaded successfully
+[INFO] Loading candidate profile from: ./candidateProfileConfig.json
+[INFO] Candidate profile loaded successfully for candidateId: candidate1
+[INFO] Loading resume from: /Users/karanshah/Documents/Documents/KaranMacBackup/Resume/job-autopilot/MasterResumeDocx.docx
+[INFO] Extracting text from DOCX resume...
+[INFO] DOCX resume extracted successfully.
+[INFO] Resume loaded and normalized. Length: 8194 chars
+[INFO] Returning resume text. Length: 8194 chars
+Resume preview: MASTER RESUME CANDIDATE CONTACT INFO: Name: Karan Shah Current Location: Nagpur, India (Open to relocation) Email: karansunshah@gmail.com Phone: +1-6197560887 LinkedIn: www.linkedin.com/in/karan-shah- ...
+[INFO] Loaded 2 job IDs from /Users/karanshah/Documents/Documents/KaranMacBackup/Resume/job-autopilot/jobs_persistence.txt
+🌐 Fetching jobs from Adzuna...
+[INFO] Fetching jobs from Adzuna...
+[INFO] AdzunaService.getJobsAsync called
+[INFO] Search criteria: {
+  "keywords": [
+    "Software Engineer",
+    "Principal Software Engineer"
+  ],
+  "locations": [
+    {
+      "country": "IN",
+      "city": ""
+    }
+  ],
+  "experienceLevel": [
+    {
+      "level": "senior"
+    },
+    {
+      "level": "lead"
+    }
+  ],
+  "jobType": [
+    "full-time"
+  ],
+  "pageSize": 20
+}
+[INFO] keyword: "Software Engineer"
+[INFO] Built URL: https://api.adzuna.com/v1/api/jobs/in/search/1?app_id=5084fa2c&app_key=17345e05db1f262939f35a18bcafea7c&what=Software+Engineer&results_per_page=20&content-type=application%2Fjson
+[INFO] keyword: "Principal Software Engineer"
+[INFO] Built URL: https://api.adzuna.com/v1/api/jobs/in/search/1?app_id=5084fa2c&app_key=17345e05db1f262939f35a18bcafea7c&what=Principal+Software+Engineer&results_per_page=20&content-type=application%2Fjson
+[INFO] Total URLs to fetch: 2
+[INFO] Fetching: https://api.adzuna.com/v1/api/jobs/in/search/1?app_id=5084fa2c&app_key=17345e05db1f262939f35a18bcafea7c&what=Software+Engineer&results_per_page=20&content-type=application%2Fjson
+[INFO] Fetching: https://api.adzuna.com/v1/api/jobs/in/search/1?app_id=5084fa2c&app_key=17345e05db1f262939f35a18bcafea7c&what=Principal+Software+Engineer&results_per_page=20&content-type=application%2Fjson
+[INFO] Response status: 200
+[INFO] Parsed 20 jobs
+[INFO] Response status: 200
+[INFO] Parsed 20 jobs
+[INFO] Total jobs: 40
+[INFO] Retrieved 40 jobs from Adzuna
+[INFO] Fetched 40 jobs
+[JobFilter] Starting filtering process...
+[JobFilter] Total jobs received: 40
+[JobFilter] Search criteria: {
+  "keywords": [
+    "Software Engineer",
+    "Principal Software Engineer"
+  ],
+  "locations": [
+    {
+      "country": "IN",
+      "city": ""
+    }
+  ],
+  "experienceLevel": [
+    {
+      "level": "senior"
+    },
+    {
+      "level": "lead"
+    }
+  ],
+  "jobType": [
+    "full-time"
+  ],
+  "pageSize": 20
+}
+[JobFilter] --------------------------------------------------
+[JobFilter] Evaluating job: adzuna5710022376
+[JobFilter] Title: Software Engineer
+[JobFilter] Company: Under Armour India
+[JobFilter] Keyword check:
+[JobFilter]   Required: (2) ['Software Engineer', 'Principal Software Engineer']
+[JobFilter]   Matched: (1) ['Software Engineer']
+[JobFilter] Job type check: {required: Array(1), actual: Array(1), matches: Array(1)}
+[JobFilter] Experience check FIXED: {structuredMatches: Array(0), textMatches: Array(0), hasMatch: false}
+[JobFilter] ❌ Failed experience filter
+[JobFilter] 🚫 Job REJECTED: adzuna5710022376
+[JobFilter] --------------------------------------------------
+[JobFilter] Evaluating job: adzuna5632722947
+[JobFilter] Title: Software Engineer
+[JobFilter] Company: Ferguson
+[JobFilter] Keyword check:
+[JobFilter]   Required: (2) ['Software Engineer', 'Principal Software Engineer']
+[JobFilter]   Matched: (1) ['Software Engineer']
+[JobFilter] Job type check: {required: Array(1), actual: Array(1), matches: Array(1)}
+[JobFilter] Experience check FIXED: {structuredMatches: Array(0), textMatches: Array(0), hasMatch: false}
+[JobFilter] ❌ Failed experience filter
+[JobFilter] 🚫 Job REJECTED: adzuna5632722947
+[JobFilter] --------------------------------------------------
+[JobFilter] Evaluating job: adzuna5579979838
+[JobFilter] Title: Manager, Software Engineering
+[JobFilter] Company: TMUS Global Solutions
+[JobFilter] Keyword check:
+[JobFilter]   Required: (2) ['Software Engineer', 'Principal Software Engineer']
+[JobFilter]   Matched: (1) ['Software Engineer']
+[JobFilter] Job type check: {required: Array(1), actual: Array(1), matches: Array(1)}
+[JobFilter] Experience check FIXED: {structuredMatches: Array(0), textMatches: Array(1), hasMatch: true}
+[JobFilter] Location check: {required: Array(1), actual: {…}, matches: Array(1)}
+[JobFilter] ✅ Job PASSED filter: adzuna5579979838
+[JobFilter] --------------------------------------------------
+[JobFilter] Evaluating job: adzuna5577083868
+[JobFilter] Title: Manager, Software Engineering
+[JobFilter] Company: TMUS Global Solutions
+[JobFilter] Keyword check:
+[JobFilter]   Required: (2) ['Software Engineer', 'Principal Software Engineer']
+[JobFilter]   Matched: (1) ['Software Engineer']
+[JobFilter] Job type check: {required: Array(1), actual: Array(1), matches: Array(1)}
+[JobFilter] Experience check FIXED: {structuredMatches: Array(0), textMatches: Array(1), hasMatch: true}
+[JobFilter] Location check: {required: Array(1), actual: {…}, matches: Array(1)}
+[JobFilter] ✅ Job PASSED filter: adzuna5577083868
+[JobFilter] --------------------------------------------------
+[JobFilter] Evaluating job: adzuna5681941694
+[JobFilter] Title: Telecommunications Software Engineer
+[JobFilter] Company: Xtel
+[JobFilter] Keyword check:
+[JobFilter]   Required: (2) ['Software Engineer', 'Principal Software Engineer']
+[JobFilter]   Matched: (1) ['Software Engineer']
+[JobFilter] Job type check: {required: Array(1), actual: Array(1), matches: Array(1)}
+[JobFilter] Experience check FIXED: {structuredMatches: Array(0), textMatches: Array(0), hasMatch: false}
+[JobFilter] ❌ Failed experience filter
+[JobFilter] 🚫 Job REJECTED: adzuna5681941694
+[JobFilter] --------------------------------------------------
+[JobFilter] Evaluating job: adzuna5050242916
+[JobFilter] Title: Software Engineering Advisor
+[JobFilter] Company: Evernorth
+[JobFilter] Keyword check:
+[JobFilter]   Required: (2) ['Software Engineer', 'Principal Software Engineer']
+[JobFilter]   Matched: (1) ['Software Engineer']
+[JobFilter] Job type check: {required: Array(1), actual: Array(1), matches: Array(1)}
+[JobFilter] Experience check FIXED: {structuredMatches: Array(0), textMatches: Array(0), hasMatch: false}
+[JobFilter] ❌ Failed experience filter
+[JobFilter] 🚫 Job REJECTED: adzuna5050242916
+[JobFilter] --------------------------------------------------
+[JobFilter] Evaluating job: adzuna5699972620
+[JobFilter] Title: Software Engineer in Test
+[JobFilter] Company: Worldline Global Services
+[JobFilter] Keyword check:
+[JobFilter]   Required: (2) ['Software Engineer', 'Principal Software Engineer']
+[JobFilter]   Matched: (1) ['Software Engineer']
+[JobFilter] Job type check: {required: Array(1), actual: Array(1), matches: Array(1)}
+[JobFilter] Experience check FIXED: {structuredMatches: Array(0), textMatches: Array(0), hasMatch: false}
+[JobFilter] ❌ Failed experience filter
+[JobFilter] 🚫 Job REJECTED: adzuna5699972620
+[JobFilter] --------------------------------------------------
+[JobFilter] Evaluating job: adzuna5574907102
+[JobFilter] Title: Manager, Software Engineering
+[JobFilter] Company: TMUS Global Solutions
+[JobFilter] Keyword check:
+[JobFilter]   Required: (2) ['Software Engineer', 'Principal Software Engineer']
+[JobFilter]   Matched: (1) ['Software Engineer']
+[JobFilter] Job type check: {required: Array(1), actual: Array(1), matches: Array(1)}
+[JobFilter] Experience check FIXED: {structuredMatches: Array(0), textMatches: Array(1), hasMatch: true}
+[JobFilter] Location check: {required: Array(1), actual: {…}, matches: Array(1)}
+[JobFilter] ✅ Job PASSED filter: adzuna5574907102
+[JobFilter] --------------------------------------------------
+[JobFilter] Evaluating job: adzuna5574907612
+[JobFilter] Title: Manager, Software Engineering
+[JobFilter] Company: TMUS Global Solutions
+[JobFilter] Keyword check:
+[JobFilter]   Required: (2) ['Software Engineer', 'Principal Software Engineer']
+[JobFilter]   Matched: (1) ['Software Engineer']
+[JobFilter] Job type check: {required: Array(1), actual: Array(1), matches: Array(1)}
+[JobFilter] Experience check FIXED: {structuredMatches: Array(0), textMatches: Array(0), hasMatch: false}
+[JobFilter] ❌ Failed experience filter
+[JobFilter] 🚫 Job REJECTED: adzuna5574907612
+[JobFilter] --------------------------------------------------
+[JobFilter] Evaluating job: adzuna5538938820
+[JobFilter] Title: Senior Software Engineer
+[JobFilter] Company: Stolt-Nielsen Digital Innovation Centre
+[JobFilter] Keyword check:
+[JobFilter]   Required: (2) ['Software Engineer', 'Principal Software Engineer']
+[JobFilter]   Matched: (1) ['Software Engineer']
+[JobFilter] Job type check: {required: Array(1), actual: Array(1), matches: Array(1)}
+[JobFilter] Experience check FIXED: {structuredMatches: Array(0), textMatches: Array(1), hasMatch: true}
+[JobFilter] Location check: {required: Array(1), actual: {…}, matches: Array(1)}
+[JobFilter] ✅ Job PASSED filter: adzuna5538938820
+[JobFilter] --------------------------------------------------
+[JobFilter] Evaluating job: adzuna5621100775
+[JobFilter] Title: Senior Software Engineer
+[JobFilter] Company: Sedgwick India
+[JobFilter] Keyword check:
+[JobFilter]   Required: (2) ['Software Engineer', 'Principal Software Engineer']
+[JobFilter]   Matched: (1) ['Software Engineer']
+[JobFilter] Job type check: {required: Array(1), actual: Array(1), matches: Array(1)}
+[JobFilter] Experience check FIXED: {structuredMatches: Array(0), textMatches: Array(2), hasMatch: true}
+[JobFilter] Location check: {required: Array(1), actual: {…}, matches: Array(1)}
+[JobFilter] ✅ Job PASSED filter: adzuna5621100775
+[JobFilter] --------------------------------------------------
+[JobFilter] Evaluating job: adzuna5579979628
+[JobFilter] Title: Manager, Software Engineering
+[JobFilter] Company: TMUS Global Solutions
+[JobFilter] Keyword check:
+[JobFilter]   Required: (2) ['Software Engineer', 'Principal Software Engineer']
+[JobFilter]   Matched: (1) ['Software Engineer']
+[JobFilter] Job type check: {required: Array(1), actual: Array(1), matches: Array(1)}
+[JobFilter] Experience check FIXED: {structuredMatches: Array(0), textMatches: Array(1), hasMatch: true}
+[JobFilter] Location check: {required: Array(1), actual: {…}, matches: Array(1)}
+[JobFilter] ✅ Job PASSED filter: adzuna5579979628
+[JobFilter] --------------------------------------------------
+[JobFilter] Evaluating job: adzuna5686848003
+[JobFilter] Title: Senior Software Engineer
+[JobFilter] Company: Costco
+[JobFilter] Keyword check:
+[JobFilter]   Required: (2) ['Software Engineer', 'Principal Software Engineer']
+[JobFilter]   Matched: (1) ['Software Engineer']
+[JobFilter] Job type check: {required: Array(1), actual: Array(1), matches: Array(1)}
+[JobFilter] Experience check FIXED: {structuredMatches: Array(0), textMatches: Array(1), hasMatch: true}
+[JobFilter] Location check: {required: Array(1), actual: {…}, matches: Array(1)}
+[JobFilter] ✅ Job PASSED filter: adzuna5686848003
+[JobFilter] --------------------------------------------------
+[JobFilter] Evaluating job: adzuna5706835417
+[JobFilter] Title: Senior Software Engineer
+[JobFilter] Company: Stolt-Nielsen Digital Innovation Centre
+[JobFilter] Keyword check:
+[JobFilter]   Required: (2) ['Software Engineer', 'Principal Software Engineer']
+[JobFilter]   Matched: (1) ['Software Engineer']
+[JobFilter] Job type check: {required: Array(1), actual: Array(1), matches: Array(1)}
+[JobFilter] Experience check FIXED: {structuredMatches: Array(0), textMatches: Array(2), hasMatch: true}
+[JobFilter] Location check: {required: Array(1), actual: {…}, matches: Array(1)}
+[JobFilter] ✅ Job PASSED filter: adzuna5706835417
+[JobFilter] --------------------------------------------------
+[JobFilter] Evaluating job: adzuna5688254707
+[JobFilter] Title: Senior Software Engineer
+[JobFilter] Company: Under Armour India
+[JobFilter] Keyword check:
+[JobFilter]   Required: (2) ['Software Engineer', 'Principal Software Engineer']
+[JobFilter]   Matched: (1) ['Software Engineer']
+[JobFilter] Job type check: {required: Array(1), actual: Array(1), matches: Array(1)}
+[JobFilter] Experience check FIXED: {structuredMatches: Array(0), textMatches: Array(1), hasMatch: true}
+[JobFilter] Location check: {required: Array(1), actual: {…}, matches: Array(1)}
+[JobFilter] ✅ Job PASSED filter: adzuna5688254707
+[JobFilter] --------------------------------------------------
+[JobFilter] Evaluating job: adzuna5688254800
+[JobFilter] Title: Senior Software Engineer
+[JobFilter] Company: Under Armour India
+[JobFilter] Keyword check:
+[JobFilter]   Required: (2) ['Software Engineer', 'Principal Software Engineer']
+[JobFilter]   Matched: (1) ['Software Engineer']
+[JobFilter] Job type check: {required: Array(1), actual: Array(1), matches: Array(1)}
+[JobFilter] Experience check FIXED: {structuredMatches: Array(0), textMatches: Array(1), hasMatch: true}
+[JobFilter] Location check: {required: Array(1), actual: {…}, matches: Array(1)}
+[JobFilter] ✅ Job PASSED filter: adzuna5688254800
+[JobFilter] --------------------------------------------------
+[JobFilter] Evaluating job: adzuna5395623709
+[JobFilter] Title: Sr. Software Engineer
+[JobFilter] Company: Costco
+[JobFilter] Keyword check:
+[JobFilter]   Required: (2) ['Software Engineer', 'Principal Software Engineer']
+[JobFilter]   Matched: (1) ['Software Engineer']
+[JobFilter] Job type check: {required: Array(1), actual: Array(1), matches: Array(1)}
+[JobFilter] Experience check FIXED: {structuredMatches: Array(0), textMatches: Array(1), hasMatch: true}
+[JobFilter] Location check: {required: Array(1), actual: {…}, matches: Array(1)}
+[JobFilter] ✅ Job PASSED filter: adzuna5395623709
+[JobFilter] --------------------------------------------------
+[JobFilter] Evaluating job: adzuna5688254744
+[JobFilter] Title: Senior Software Engineer
+[JobFilter] Company: Under Armour India
+[JobFilter] Keyword check:
+[JobFilter]   Required: (2) ['Software Engineer', 'Principal Software Engineer']
+[JobFilter]   Matched: (1) ['Software Engineer']
+[JobFilter] Job type check: {required: Array(1), actual: Array(1), matches: Array(1)}
+[JobFilter] Experience check FIXED: {structuredMatches: Array(0), textMatches: Array(1), hasMatch: true}
+[JobFilter] Location check: {required: Array(1), actual: {…}, matches: Array(1)}
+[JobFilter] ✅ Job PASSED filter: adzuna5688254744
+[JobFilter] --------------------------------------------------
+[JobFilter] Evaluating job: adzuna5688254785
+[JobFilter] Title: Senior Software Engineer
+[JobFilter] Company: Under Armour India
+[JobFilter] Keyword check:
+[JobFilter]   Required: (2) ['Software Engineer', 'Principal Software Engineer']
+[JobFilter]   Matched: (1) ['Software Engineer']
+[JobFilter] Job type check: {required: Array(1), actual: Array(1), matches: Array(1)}
+[JobFilter] Experience check FIXED: {structuredMatches: Array(0), textMatches: Array(1), hasMatch: true}
+[JobFilter] Location check: {required: Array(1), actual: {…}, matches: Array(1)}
+[JobFilter] ✅ Job PASSED filter: adzuna5688254785
+[JobFilter] --------------------------------------------------
+[JobFilter] Evaluating job: adzuna5680955770
+[JobFilter] Title: Senior Software Engineer
+[JobFilter] Company: Costco
+[JobFilter] Keyword check:
+[JobFilter]   Required: (2) ['Software Engineer', 'Principal Software Engineer']
+[JobFilter]   Matched: (1) ['Software Engineer']
+[JobFilter] Job type check: {required: Array(1), actual: Array(1), matches: Array(1)}
+[JobFilter] Experience check FIXED: {structuredMatches: Array(0), textMatches: Array(1), hasMatch: true}
+[JobFilter] Location check: {required: Array(1), actual: {…}, matches: Array(1)}
+[JobFilter] ✅ Job PASSED filter: adzuna5680955770
+[JobFilter] --------------------------------------------------
+[JobFilter] Evaluating job: adzuna5449748975
+[JobFilter] Title: Principal Software Engineer
+[JobFilter] Company: FM India
+[JobFilter] Keyword check:
+[JobFilter]   Required: (2) ['Software Engineer', 'Principal Software Engineer']
+[JobFilter]   Matched: (2) ['Software Engineer', 'Principal Software Engineer']
+[JobFilter] Job type check: {required: Array(1), actual: Array(1), matches: Array(1)}
+[JobFilter] Experience check FIXED: {structuredMatches: Array(0), textMatches: Array(1), hasMatch: true}
+[JobFilter] Location check: {required: Array(1), actual: {…}, matches: Array(1)}
+[JobFilter] ✅ Job PASSED filter: adzuna5449748975
+[JobFilter] --------------------------------------------------
+[JobFilter] Evaluating job: adzuna5004649693
+[JobFilter] Title: Principal Software Engineer
+[JobFilter] Company: ANSR Summit Consulting
+[JobFilter] Keyword check:
+[JobFilter]   Required: (2) ['Software Engineer', 'Principal Software Engineer']
+[JobFilter]   Matched: (2) ['Software Engineer', 'Principal Software Engineer']
+[JobFilter] Job type check: {required: Array(1), actual: Array(1), matches: Array(1)}
+[JobFilter] Experience check FIXED: {structuredMatches: Array(0), textMatches: Array(1), hasMatch: true}
+[JobFilter] Location check: {required: Array(1), actual: {…}, matches: Array(1)}
+[JobFilter] ✅ Job PASSED filter: adzuna5004649693
+[JobFilter] --------------------------------------------------
+[JobFilter] Evaluating job: adzuna5187969099
+[JobFilter] Title: Principal Software Engineer - TM
+[JobFilter] Company: Alkami
+[JobFilter] Keyword check:
+[JobFilter]   Required: (2) ['Software Engineer', 'Principal Software Engineer']
+[JobFilter]   Matched: (2) ['Software Engineer', 'Principal Software Engineer']
+[JobFilter] Job type check: {required: Array(1), actual: Array(1), matches: Array(1)}
+[JobFilter] Experience check FIXED: {structuredMatches: Array(0), textMatches: Array(1), hasMatch: true}
+[JobFilter] Location check: {required: Array(1), actual: {…}, matches: Array(1)}
+[JobFilter] ✅ Job PASSED filter: adzuna5187969099
+[JobFilter] --------------------------------------------------
+[JobFilter] Evaluating job: adzuna4945949929
+[JobFilter] Title: Senior Manager, Principal Software Engineer Finite Scheduling
+[JobFilter] Company: Bristol Myers Squibb
+[JobFilter] Keyword check:
+[JobFilter]   Required: (2) ['Software Engineer', 'Principal Software Engineer']
+[JobFilter]   Matched: (2) ['Software Engineer', 'Principal Software Engineer']
+[JobFilter] Job type check: {required: Array(1), actual: Array(1), matches: Array(1)}
+[JobFilter] Experience check FIXED: {structuredMatches: Array(0), textMatches: Array(2), hasMatch: true}
+[JobFilter] Location check: {required: Array(1), actual: {…}, matches: Array(1)}
+[JobFilter] ✅ Job PASSED filter: adzuna4945949929
+[JobFilter] --------------------------------------------------
+[JobFilter] Evaluating job: adzuna5708449247
+[JobFilter] Title: Principal Software Engineer-Product Security, SDL & Threat Modeling
+[JobFilter] Company: Dell Technologies
+[JobFilter] Keyword check:
+[JobFilter]   Required: (2) ['Software Engineer', 'Principal Software Engineer']
+[JobFilter]   Matched: (2) ['Software Engineer', 'Principal Software Engineer']
+[JobFilter] Job type check: {required: Array(1), actual: Array(1), matches: Array(1)}
+[JobFilter] Experience check FIXED: {structuredMatches: Array(0), textMatches: Array(1), hasMatch: true}
+[JobFilter] Location check: {required: Array(1), actual: {…}, matches: Array(1)}
+[JobFilter] ✅ Job PASSED filter: adzuna5708449247
+[JobFilter] --------------------------------------------------
+[JobFilter] Evaluating job: adzuna4764141514
+[JobFilter] Title: Senior Manager, Principal software Engineer Supply chain planning (SAP IBP & Kinaxis)
+[JobFilter] Company: Bristol Myers Squibb
+[JobFilter] Keyword check:
+[JobFilter]   Required: (2) ['Software Engineer', 'Principal Software Engineer']
+[JobFilter]   Matched: (2) ['Software Engineer', 'Principal Software Engineer']
+[JobFilter] Job type check: {required: Array(1), actual: Array(1), matches: Array(1)}
+[JobFilter] Experience check FIXED: {structuredMatches: Array(0), textMatches: Array(2), hasMatch: true}
+[JobFilter] Location check: {required: Array(1), actual: {…}, matches: Array(1)}
+[JobFilter] ✅ Job PASSED filter: adzuna4764141514
+[JobFilter] --------------------------------------------------
+[JobFilter] Evaluating job: adzuna5702714183
+[JobFilter] Title: Principal Software Test Engineer (Noida)
+[JobFilter] Company: Trintech
+[JobFilter] Keyword check:
+[JobFilter]   Required: (2) ['Software Engineer', 'Principal Software Engineer']
+[JobFilter]   Matched: (0) []
+[JobFilter] ❌ Failed keyword filter
+[JobFilter] 🚫 Job REJECTED: adzuna5702714183
+[JobFilter] --------------------------------------------------
+[JobFilter] Evaluating job: adzuna5604462180
+[JobFilter] Title: Principal Engineer, Software
+[JobFilter] Company: TMUS Global Solutions
+[JobFilter] Keyword check:
+[JobFilter]   Required: (2) ['Software Engineer', 'Principal Software Engineer']
+[JobFilter]   Matched: (1) ['Software Engineer']
+[JobFilter] Job type check: {required: Array(1), actual: Array(1), matches: Array(1)}
+[JobFilter] Experience check FIXED: {structuredMatches: Array(0), textMatches: Array(1), hasMatch: true}
+[JobFilter] Location check: {required: Array(1), actual: {…}, matches: Array(1)}
+[JobFilter] ✅ Job PASSED filter: adzuna5604462180
+[JobFilter] --------------------------------------------------
+[JobFilter] Evaluating job: adzuna5703563319
+[JobFilter] Title: Principal Engineer
+[JobFilter] Company: Antal International
+[JobFilter] Keyword check:
+[JobFilter]   Required: (2) ['Software Engineer', 'Principal Software Engineer']
+[JobFilter]   Matched: (2) ['Software Engineer', 'Principal Software Engineer']
+[JobFilter] Job type check: {required: Array(1), actual: Array(1), matches: Array(1)}
+[JobFilter] Experience check FIXED: {structuredMatches: Array(0), textMatches: Array(1), hasMatch: true}
+[JobFilter] Location check: {required: Array(1), actual: {…}, matches: Array(1)}
+[JobFilter] ✅ Job PASSED filter: adzuna5703563319
+[JobFilter] --------------------------------------------------
+[JobFilter] Evaluating job: adzuna5690364101
+[JobFilter] Title: Principal Engineer
+[JobFilter] Company: Clari
+[JobFilter] Keyword check:
+[JobFilter]   Required: (2) ['Software Engineer', 'Principal Software Engineer']
+[JobFilter]   Matched: (2) ['Software Engineer', 'Principal Software Engineer']
+[JobFilter] Job type check: {required: Array(1), actual: Array(1), matches: Array(1)}
+[JobFilter] Experience check FIXED: {structuredMatches: Array(0), textMatches: Array(1), hasMatch: true}
+[JobFilter] Location check: {required: Array(1), actual: {…}, matches: Array(1)}
+[JobFilter] ✅ Job PASSED filter: adzuna5690364101
+[JobFilter] --------------------------------------------------
+[JobFilter] Evaluating job: adzuna5393758738
+[JobFilter] Title: Principal Engineer, Software - Accounting Tech
+[JobFilter] Company: Talent500 INC
+[JobFilter] Keyword check:
+[JobFilter]   Required: (2) ['Software Engineer', 'Principal Software Engineer']
+[JobFilter]   Matched: (0) []
+[JobFilter] ❌ Failed keyword filter
+[JobFilter] 🚫 Job REJECTED: adzuna5393758738
+[JobFilter] --------------------------------------------------
+[JobFilter] Evaluating job: adzuna5701275759
+[JobFilter] Title: Principal Engineer, IT Software [T500-25249]
+[JobFilter] Company: ANSR
+[JobFilter] Keyword check:
+[JobFilter]   Required: (2) ['Software Engineer', 'Principal Software Engineer']
+[JobFilter]   Matched: (0) []
+[JobFilter] ❌ Failed keyword filter
+[JobFilter] 🚫 Job REJECTED: adzuna5701275759
+[JobFilter] --------------------------------------------------
+[JobFilter] Evaluating job: adzuna5702485664
+[JobFilter] Title: Software Architect/Principal Engineer (Fullstack/Backend)
+[JobFilter] Company: HG Insights
+[JobFilter] Keyword check:
+[JobFilter]   Required: (2) ['Software Engineer', 'Principal Software Engineer']
+[JobFilter]   Matched: (0) []
+[JobFilter] ❌ Failed keyword filter
+[JobFilter] 🚫 Job REJECTED: adzuna5702485664
+[JobFilter] --------------------------------------------------
+[JobFilter] Evaluating job: adzuna5709410276
+[JobFilter] Title: Principal Software Engineer
+[JobFilter] Company: Eurofins GSC IT DC
+[JobFilter] Keyword check:
+[JobFilter]   Required: (2) ['Software Engineer', 'Principal Software Engineer']
+[JobFilter]   Matched: (2) ['Software Engineer', 'Principal Software Engineer']
+[JobFilter] Job type check: {required: Array(1), actual: Array(1), matches: Array(1)}
+[JobFilter] Experience check FIXED: {structuredMatches: Array(0), textMatches: Array(1), hasMatch: true}
+[JobFilter] Location check: {required: Array(1), actual: {…}, matches: Array(1)}
+[JobFilter] ✅ Job PASSED filter: adzuna5709410276
+[JobFilter] --------------------------------------------------
+[JobFilter] Evaluating job: adzuna5707992374
+[JobFilter] Title: Principal Software Engineer
+[JobFilter] Company: Mercor
+[JobFilter] Keyword check:
+[JobFilter]   Required: (2) ['Software Engineer', 'Principal Software Engineer']
+[JobFilter]   Matched: (2) ['Software Engineer', 'Principal Software Engineer']
+[JobFilter] Job type check: {required: Array(1), actual: Array(1), matches: Array(0)}
+[JobFilter] ❌ Failed job type filter
+[JobFilter] 🚫 Job REJECTED: adzuna5707992374
+[JobFilter] --------------------------------------------------
+[JobFilter] Evaluating job: adzuna5695188071
+[JobFilter] Title: Principal Software Engineer
+[JobFilter] Company: Eurofins GSC IT DC
+[JobFilter] Keyword check:
+[JobFilter]   Required: (2) ['Software Engineer', 'Principal Software Engineer']
+[JobFilter]   Matched: (2) ['Software Engineer', 'Principal Software Engineer']
+[JobFilter] Job type check: {required: Array(1), actual: Array(1), matches: Array(1)}
+[JobFilter] Experience check FIXED: {structuredMatches: Array(0), textMatches: Array(1), hasMatch: true}
+[JobFilter] Location check: {required: Array(1), actual: {…}, matches: Array(1)}
+[JobFilter] ✅ Job PASSED filter: adzuna5695188071
+[JobFilter] --------------------------------------------------
+[JobFilter] Evaluating job: adzuna5678602902
+[JobFilter] Title: Principal Software Engineer
+[JobFilter] Company: Eurofins GSC IT DC
+[JobFilter] Keyword check:
+[JobFilter]   Required: (2) ['Software Engineer', 'Principal Software Engineer']
+[JobFilter]   Matched: (2) ['Software Engineer', 'Principal Software Engineer']
+[JobFilter] Job type check: {required: Array(1), actual: Array(1), matches: Array(1)}
+[JobFilter] Experience check FIXED: {structuredMatches: Array(0), textMatches: Array(1), hasMatch: true}
+[JobFilter] Location check: {required: Array(1), actual: {…}, matches: Array(1)}
+[JobFilter] ✅ Job PASSED filter: adzuna5678602902
+[JobFilter] --------------------------------------------------
+[JobFilter] Evaluating job: adzuna5171459128
+[JobFilter] Title: Principal Software Engineer
+[JobFilter] Company: Gipfel & Schnell Consultings Pvt Ltd
+[JobFilter] Keyword check:
+[JobFilter]   Required: (2) ['Software Engineer', 'Principal Software Engineer']
+[JobFilter]   Matched: (2) ['Software Engineer', 'Principal Software Engineer']
+[JobFilter] Job type check: {required: Array(1), actual: Array(1), matches: Array(1)}
+[JobFilter] Experience check FIXED: {structuredMatches: Array(0), textMatches: Array(1), hasMatch: true}
+[JobFilter] Location check: {required: Array(1), actual: {…}, matches: Array(1)}
+[JobFilter] ✅ Job PASSED filter: adzuna5171459128
+[JobFilter] --------------------------------------------------
+[JobFilter] Evaluating job: adzuna5698600238
+[JobFilter] Title: Principal Software Engineer
+[JobFilter] Company: Oracle
+[JobFilter] Keyword check:
+[JobFilter]   Required: (2) ['Software Engineer', 'Principal Software Engineer']
+[JobFilter]   Matched: (2) ['Software Engineer', 'Principal Software Engineer']
+[JobFilter] Job type check: {required: Array(1), actual: Array(1), matches: Array(1)}
+[JobFilter] Experience check FIXED: {structuredMatches: Array(0), textMatches: Array(1), hasMatch: true}
+[JobFilter] Location check: {required: Array(1), actual: {…}, matches: Array(1)}
+[JobFilter] ✅ Job PASSED filter: adzuna5698600238
+[JobFilter] --------------------------------------------------
+[JobFilter] Evaluating job: adzuna5653961970
+[JobFilter] Title: Principal Software Engineer
+[JobFilter] Company: Commonwealth Bank of Australia
+[JobFilter] Keyword check:
+[JobFilter]   Required: (2) ['Software Engineer', 'Principal Software Engineer']
+[JobFilter]   Matched: (2) ['Software Engineer', 'Principal Software Engineer']
+[JobFilter] Job type check: {required: Array(1), actual: Array(1), matches: Array(1)}
+[JobFilter] Experience check FIXED: {structuredMatches: Array(0), textMatches: Array(1), hasMatch: true}
+[JobFilter] Location check: {required: Array(1), actual: {…}, matches: Array(1)}
+[JobFilter] ✅ Job PASSED filter: adzuna5653961970
+[JobFilter] --------------------------------------------------
+[JobFilter] Filtering complete
+[JobFilter] Input jobs: 40
+[JobFilter] Filtered jobs: 29
+[INFO] 29 jobs after search criteria filtering
+[INFO] 29 new jobs after deduplication
+[INFO] Input job objects: {id: 'adzuna5579979838', fetchedAt: Sun Apr 26 2026 17:57:00 GMT+0530 (India Standard Time), scoringStatus: 'pending', sourceId: '5579979838', source: 'adzuna', …}
+[INFO] Scoring job adzuna5579979838 using OpenAI...
+[INFO] Input job objects: {id: 'adzuna5577083868', fetchedAt: Sun Apr 26 2026 17:57:00 GMT+0530 (India Standard Time), scoringStatus: 'pending', sourceId: '5577083868', source: 'adzuna', …}
+[INFO] Scoring job adzuna5577083868 using OpenAI...
+
+📊 [OpenAI] Token Usage (gpt-4o-mini)
+   🧾 Prompt Tokens     : 2125
+   ✍️ Completion Tokens : 227
+   📦 Total Tokens      : 2352
+[INFO] Scored job adzuna5579979838 with score undefined using OpenAI
+[INFO] Tailoring Resume for job adzuna5579979838 using OpenAIResumeTailor...
+
+📊 [OpenAI] Token Usage (gpt-4o-mini)
+   🧾 Prompt Tokens     : 2124
+   ✍️ Completion Tokens : 231
+   📦 Total Tokens      : 2355
+[INFO] Scored job adzuna5577083868 with score undefined using OpenAI
+[INFO] Tailoring Resume for job adzuna5577083868 using OpenAIResumeTailor...
+
+📊 [OpenAIResumeTailor] Token Usage (gpt-4o)
+   🧾 Prompt Tokens     : 3064
+   ✍️ Completion Tokens : 917
+   📦 Total Tokens      : 3981
+[INFO] Tailored Resume for job adzuna5579979838 using OpenAIResumeTailor
+[INFO] Saving tailored resume in JSON and DOCX formats...
+[INFO] Saving tailored resume metadata...
+[INFO] Saving tailored resume...
+[INFO] Creating folder: /Users/karanshah/Documents/Documents/KaranMacBackup/Resume/job-autopilot/tailored-resumes/tmus_global_solutions/india
+[INFO] Saved tailored resume → /Users/karanshah/Documents/Documents/KaranMacBackup/Resume/job-autopilot/tailored-resumes/tmus_global_solutions/india/manager_software_engineering_adzuna5579979838.json
+
+🎯 Save operation complete
+📄 Saved: /Users/karanshah/Documents/Documents/KaranMacBackup/Resume/job-autopilot/tailored-resumes/tmus_global_solutions/india/manager_software_engineering_adzuna5579979838.json
+[INFO] Saving tailored resume as DOCX...
+[INFO] Saving Harvard-style resume...
+
+📊 [OpenAIResumeTailor] Token Usage (gpt-4o)
+   🧾 Prompt Tokens     : 3066
+   ✍️ Completion Tokens : 1039
+   📦 Total Tokens      : 4105
+[INFO] Tailored Resume for job adzuna5577083868 using OpenAIResumeTailor
+[INFO] Saving tailored resume in JSON and DOCX formats...
+[INFO] Saving tailored resume metadata...
+[INFO] Saving tailored resume...
+[INFO] Saved tailored resume → /Users/karanshah/Documents/Documents/KaranMacBackup/Resume/job-autopilot/tailored-resumes/tmus_global_solutions/india/manager_software_engineering_adzuna5577083868.json
+
+🎯 Save operation complete
+📄 Saved: /Users/karanshah/Documents/Documents/KaranMacBackup/Resume/job-autopilot/tailored-resumes/tmus_global_solutions/india/manager_software_engineering_adzuna5577083868.json
+[INFO] Saving tailored resume as DOCX...
+[INFO] Saving Harvard-style resume...
+[INFO] Saved → /Users/karanshah/Documents/Documents/KaranMacBackup/Resume/job-autopilot/tailored-resumes/tmus_global_solutions/india/manager_software_engineering_adzuna5579979838.docx
+
+🎯 DOCX save complete
+📄 Saved: /Users/karanshah/Documents/Documents/KaranMacBackup/Resume/job-autopilot/tailored-resumes/tmus_global_solutions/india/manager_software_engineering_adzuna5579979838.docx
+[INFO] Both JSON and DOCX resumes saved successfully.
+✅ "Manager, Software Engineering" → JSON: /Users/karanshah/Documents/Documents/KaranMacBackup/Resume/job-autopilot/tailored-resumes/tmus_global_solutions/india/manager_software_engineering_adzuna5579979838.json, DOCX: /Users/karanshah/Documents/Documents/KaranMacBackup/Resume/job-autopilot/tailored-resumes/tmus_global_solutions/india/manager_software_engineering_adzuna5579979838.docx
+[INFO] Lock acquired
+[INFO] Saved → /Users/karanshah/Documents/Documents/KaranMacBackup/Resume/job-autopilot/tailored-resumes/tmus_global_solutions/india/manager_software_engineering_adzuna5577083868.docx
+
+🎯 DOCX save complete
+📄 Saved: /Users/karanshah/Documents/Documents/KaranMacBackup/Resume/job-autopilot/tailored-resumes/tmus_global_solutions/india/manager_software_engineering_adzuna5577083868.docx
+[INFO] Both JSON and DOCX resumes saved successfully.
+✅ "Manager, Software Engineering" → JSON: /Users/karanshah/Documents/Documents/KaranMacBackup/Resume/job-autopilot/tailored-resumes/tmus_global_solutions/india/manager_software_engineering_adzuna5577083868.json, DOCX: /Users/karanshah/Documents/Documents/KaranMacBackup/Resume/job-autopilot/tailored-resumes/tmus_global_solutions/india/manager_software_engineering_adzuna5577083868.docx
+[INFO] Lock exists, retrying in 200ms...
+[INFO] Loaded 2 job IDs from /Users/karanshah/Documents/Documents/KaranMacBackup/Resume/job-autopilot/jobs_persistence.txt
+[INFO] Saved 3 job IDs to /Users/karanshah/Documents/Documents/KaranMacBackup/Resume/job-autopilot/jobs_persistence.txt
+[INFO] Lock released
+[INFO] Input job objects: {id: 'adzuna5574907102', fetchedAt: Sun Apr 26 2026 17:57:00 GMT+0530 (India Standard Time), scoringStatus: 'pending', sourceId: '5574907102', source: 'adzuna', …}
+[INFO] Scoring job adzuna5574907102 using OpenAI...
+[INFO] Lock acquired
+[INFO] Loaded 3 job IDs from /Users/karanshah/Documents/Documents/KaranMacBackup/Resume/job-autopilot/jobs_persistence.txt
+[INFO] Saved 4 job IDs to /Users/karanshah/Documents/Documents/KaranMacBackup/Resume/job-autopilot/jobs_persistence.txt
+[INFO] Lock released
+[INFO] Input job objects: {id: 'adzuna5538938820', fetchedAt: Sun Apr 26 2026 17:57:00 GMT+0530 (India Standard Time), scoringStatus: 'pending', sourceId: '5538938820', source: 'adzuna', …}
+[INFO] Scoring job adzuna5538938820 using OpenAI...
+
+📊 [OpenAI] Token Usage (gpt-4o-mini)
+   🧾 Prompt Tokens     : 2133
+   ✍️ Completion Tokens : 226
+   📦 Total Tokens      : 2359
+[INFO] Scored job adzuna5538938820 with score undefined using OpenAI
+[INFO] Tailoring Resume for job adzuna5538938820 using OpenAIResumeTailor...
+
+📊 [OpenAI] Token Usage (gpt-4o-mini)
+   🧾 Prompt Tokens     : 2130
+   ✍️ Completion Tokens : 236
+   📦 Total Tokens      : 2366
+[INFO] Scored job adzuna5574907102 with score undefined using OpenAI
+[INFO] Tailoring Resume for job adzuna5574907102 using OpenAIResumeTailor...
+
+📊 [OpenAIResumeTailor] Token Usage (gpt-4o)
+   🧾 Prompt Tokens     : 3068
+   ✍️ Completion Tokens : 1066
+   📦 Total Tokens      : 4134
+[INFO] Tailored Resume for job adzuna5574907102 using OpenAIResumeTailor
+[INFO] Saving tailored resume in JSON and DOCX formats...
+[INFO] Saving tailored resume metadata...
+[INFO] Saving tailored resume...
+[INFO] Saved tailored resume → /Users/karanshah/Documents/Documents/KaranMacBackup/Resume/job-autopilot/tailored-resumes/tmus_global_solutions/india/manager_software_engineering_adzuna5574907102.json
+
+🎯 Save operation complete
+📄 Saved: /Users/karanshah/Documents/Documents/KaranMacBackup/Resume/job-autopilot/tailored-resumes/tmus_global_solutions/india/manager_software_engineering_adzuna5574907102.json
+[INFO] Saving tailored resume as DOCX...
+[INFO] Saving Harvard-style resume...
+
+📊 [OpenAIResumeTailor] Token Usage (gpt-4o)
+   🧾 Prompt Tokens     : 3066
+   ✍️ Completion Tokens : 929
+   📦 Total Tokens      : 3995
+[INFO] Tailored Resume for job adzuna5538938820 using OpenAIResumeTailor
+[INFO] Saving tailored resume in JSON and DOCX formats...
+[INFO] Saving tailored resume metadata...
+[INFO] Saving tailored resume...
+[INFO] Creating folder: /Users/karanshah/Documents/Documents/KaranMacBackup/Resume/job-autopilot/tailored-resumes/stolt_nielsen_digital_innovation_centre/india
+[INFO] Saved tailored resume → /Users/karanshah/Documents/Documents/KaranMacBackup/Resume/job-autopilot/tailored-resumes/stolt_nielsen_digital_innovation_centre/india/senior_software_engineer_adzuna5538938820.json
+
+🎯 Save operation complete
+📄 Saved: /Users/karanshah/Documents/Documents/KaranMacBackup/Resume/job-autopilot/tailored-resumes/stolt_nielsen_digital_innovation_centre/india/senior_software_engineer_adzuna5538938820.json
+[INFO] Saving tailored resume as DOCX...
+[INFO] Saving Harvard-style resume...
+[INFO] Saved → /Users/karanshah/Documents/Documents/KaranMacBackup/Resume/job-autopilot/tailored-resumes/tmus_global_solutions/india/manager_software_engineering_adzuna5574907102.docx
+
+🎯 DOCX save complete
+📄 Saved: /Users/karanshah/Documents/Documents/KaranMacBackup/Resume/job-autopilot/tailored-resumes/tmus_global_solutions/india/manager_software_engineering_adzuna5574907102.docx
+[INFO] Both JSON and DOCX resumes saved successfully.
+✅ "Manager, Software Engineering" → JSON: /Users/karanshah/Documents/Documents/KaranMacBackup/Resume/job-autopilot/tailored-resumes/tmus_global_solutions/india/manager_software_engineering_adzuna5574907102.json, DOCX: /Users/karanshah/Documents/Documents/KaranMacBackup/Resume/job-autopilot/tailored-resumes/tmus_global_solutions/india/manager_software_engineering_adzuna5574907102.docx
+[INFO] Saved → /Users/karanshah/Documents/Documents/KaranMacBackup/Resume/job-autopilot/tailored-resumes/stolt_nielsen_digital_innovation_centre/india/senior_software_engineer_adzuna5538938820.docx
+
+🎯 DOCX save complete
+📄 Saved: /Users/karanshah/Documents/Documents/KaranMacBackup/Resume/job-autopilot/tailored-resumes/stolt_nielsen_digital_innovation_centre/india/senior_software_engineer_adzuna5538938820.docx
+[INFO] Both JSON and DOCX resumes saved successfully.
+✅ "Senior Software Engineer" → JSON: /Users/karanshah/Documents/Documents/KaranMacBackup/Resume/job-autopilot/tailored-resumes/stolt_nielsen_digital_innovation_centre/india/senior_software_engineer_adzuna5538938820.json, DOCX: /Users/karanshah/Documents/Documents/KaranMacBackup/Resume/job-autopilot/tailored-resumes/stolt_nielsen_digital_innovation_centre/india/senior_software_engineer_adzuna5538938820.docx
+[INFO] Lock exists, retrying in 200ms...
+[INFO] Lock acquired
+[INFO] Loaded 4 job IDs from /Users/karanshah/Documents/Documents/KaranMacBackup/Resume/job-autopilot/jobs_persistence.txt
+[INFO] Saved 5 job IDs to /Users/karanshah/Documents/Documents/KaranMacBackup/Resume/job-autopilot/jobs_persistence.txt
+[INFO] Lock released
+[INFO] Input job objects: {id: 'adzuna5621100775', fetchedAt: Sun Apr 26 2026 17:57:00 GMT+0530 (India Standard Time), scoringStatus: 'pending', sourceId: '5621100775', source: 'adzuna', …}
+[INFO] Scoring job adzuna5621100775 using OpenAI...
+[INFO] Lock acquired
+[INFO] Loaded 5 job IDs from /Users/karanshah/Documents/Documents/KaranMacBackup/Resume/job-autopilot/jobs_persistence.txt
+[INFO] Saved 6 job IDs to /Users/karanshah/Documents/Documents/KaranMacBackup/Resume/job-autopilot/jobs_persistence.txt
+[INFO] Lock released
+[INFO] Input job objects: {id: 'adzuna5579979628', fetchedAt: Sun Apr 26 2026 17:57:00 GMT+0530 (India Standard Time), scoringStatus: 'pending', sourceId: '5579979628', source: 'adzuna', …}
+[INFO] Scoring job adzuna5579979628 using OpenAI...
+
+📊 [OpenAI] Token Usage (gpt-4o-mini)
+   🧾 Prompt Tokens     : 2135
+   ✍️ Completion Tokens : 219
+   📦 Total Tokens      : 2354
+[INFO] Scored job adzuna5621100775 with score undefined using OpenAI
+[INFO] Tailoring Resume for job adzuna5621100775 using OpenAIResumeTailor...
+
+📊 [OpenAI] Token Usage (gpt-4o-mini)
+   🧾 Prompt Tokens     : 2141
+   ✍️ Completion Tokens : 254
+   📦 Total Tokens      : 2395
+[INFO] Scored job adzuna5579979628 with score undefined using OpenAI
+⏭️ Skipped "Manager, Software Engineering" (score: 75 < 80)
+[INFO] Input job objects: {id: 'adzuna5686848003', fetchedAt: Sun Apr 26 2026 17:57:00 GMT+0530 (India Standard Time), scoringStatus: 'pending', sourceId: '5686848003', source: 'adzuna', …}
+[INFO] Scoring job adzuna5686848003 using OpenAI...
+
+📊 [OpenAIResumeTailor] Token Usage (gpt-4o)
+   🧾 Prompt Tokens     : 3050
+   ✍️ Completion Tokens : 919
+   📦 Total Tokens      : 3969
+[INFO] Tailored Resume for job adzuna5621100775 using OpenAIResumeTailor
+[INFO] Saving tailored resume in JSON and DOCX formats...
+[INFO] Saving tailored resume metadata...
+[INFO] Saving tailored resume...
+[INFO] Creating folder: /Users/karanshah/Documents/Documents/KaranMacBackup/Resume/job-autopilot/tailored-resumes/sedgwick_india/india
+[INFO] Saved tailored resume → /Users/karanshah/Documents/Documents/KaranMacBackup/Resume/job-autopilot/tailored-resumes/sedgwick_india/india/senior_software_engineer_adzuna5621100775.json
+
+🎯 Save operation complete
+📄 Saved: /Users/karanshah/Documents/Documents/KaranMacBackup/Resume/job-autopilot/tailored-resumes/sedgwick_india/india/senior_software_engineer_adzuna5621100775.json
+[INFO] Saving tailored resume as DOCX...
+[INFO] Saving Harvard-style resume...
+[INFO] Saved → /Users/karanshah/Documents/Documents/KaranMacBackup/Resume/job-autopilot/tailored-resumes/sedgwick_india/india/senior_software_engineer_adzuna5621100775.docx
+
+🎯 DOCX save complete
+📄 Saved: /Users/karanshah/Documents/Documents/KaranMacBackup/Resume/job-autopilot/tailored-resumes/sedgwick_india/india/senior_software_engineer_adzuna5621100775.docx
+[INFO] Both JSON and DOCX resumes saved successfully.
+✅ "Senior Software Engineer" → JSON: /Users/karanshah/Documents/Documents/KaranMacBackup/Resume/job-autopilot/tailored-resumes/sedgwick_india/india/senior_software_engineer_adzuna5621100775.json, DOCX: /Users/karanshah/Documents/Documents/KaranMacBackup/Resume/job-autopilot/tailored-resumes/sedgwick_india/india/senior_software_engineer_adzuna5621100775.docx
+[INFO] Lock acquired
+[INFO] Loaded 6 job IDs from /Users/karanshah/Documents/Documents/KaranMacBackup/Resume/job-autopilot/jobs_persistence.txt
+[INFO] Saved 7 job IDs to /Users/karanshah/Documents/Documents/KaranMacBackup/Resume/job-autopilot/jobs_persistence.txt
+[INFO] Lock released
+[INFO] Input job objects: {id: 'adzuna5706835417', fetchedAt: Sun Apr 26 2026 17:57:00 GMT+0530 (India Standard Time), scoringStatus: 'pending', sourceId: '5706835417', source: 'adzuna', …}
+[INFO] Scoring job adzuna5706835417 using OpenAI...
+
+📊 [OpenAI] Token Usage (gpt-4o-mini)
+   🧾 Prompt Tokens     : 2138
+   ✍️ Completion Tokens : 212
+   📦 Total Tokens      : 2350
+[INFO] Scored job adzuna5706835417 with score undefined using OpenAI
+[INFO] Tailoring Resume for job adzuna5706835417 using OpenAIResumeTailor...
+
+📊 [OpenAI] Token Usage (gpt-4o-mini)
+   🧾 Prompt Tokens     : 2121
+   ✍️ Completion Tokens : 213
+   📦 Total Tokens      : 2334
+[INFO] Scored job adzuna5686848003 with score undefined using OpenAI
+[INFO] Tailoring Resume for job adzuna5686848003 using OpenAIResumeTailor...
+
+📊 [OpenAIResumeTailor] Token Usage (gpt-4o)
+   🧾 Prompt Tokens     : 3037
+   ✍️ Completion Tokens : 953
+   📦 Total Tokens      : 3990
+[INFO] Tailored Resume for job adzuna5686848003 using OpenAIResumeTailor
+[INFO] Saving tailored resume in JSON and DOCX formats...
+[INFO] Saving tailored resume metadata...
+[INFO] Saving tailored resume...
+[INFO] Creating folder: /Users/karanshah/Documents/Documents/KaranMacBackup/Resume/job-autopilot/tailored-resumes/costco/india
+[INFO] Saved tailored resume → /Users/karanshah/Documents/Documents/KaranMacBackup/Resume/job-autopilot/tailored-resumes/costco/india/senior_software_engineer_adzuna5686848003.json
+
+🎯 Save operation complete
+📄 Saved: /Users/karanshah/Documents/Documents/KaranMacBackup/Resume/job-autopilot/tailored-resumes/costco/india/senior_software_engineer_adzuna5686848003.json
+[INFO] Saving tailored resume as DOCX...
+[INFO] Saving Harvard-style resume...
+[INFO] Saved → /Users/karanshah/Documents/Documents/KaranMacBackup/Resume/job-autopilot/tailored-resumes/costco/india/senior_software_engineer_adzuna5686848003.docx
+
+🎯 DOCX save complete
+📄 Saved: /Users/karanshah/Documents/Documents/KaranMacBackup/Resume/job-autopilot/tailored-resumes/costco/india/senior_software_engineer_adzuna5686848003.docx
+[INFO] Both JSON and DOCX resumes saved successfully.
+✅ "Senior Software Engineer" → JSON: /Users/karanshah/Documents/Documents/KaranMacBackup/Resume/job-autopilot/tailored-resumes/costco/india/senior_software_engineer_adzuna5686848003.json, DOCX: /Users/karanshah/Documents/Documents/KaranMacBackup/Resume/job-autopilot/tailored-resumes/costco/india/senior_software_engineer_adzuna5686848003.docx
+[INFO] Lock acquired
+[INFO] Loaded 7 job IDs from /Users/karanshah/Documents/Documents/KaranMacBackup/Resume/job-autopilot/jobs_persistence.txt
+[INFO] Saved 8 job IDs to /Users/karanshah/Documents/Documents/KaranMacBackup/Resume/job-autopilot/jobs_persistence.txt
+[INFO] Lock released
+[INFO] Input job objects: {id: 'adzuna5688254707', fetchedAt: Sun Apr 26 2026 17:57:00 GMT+0530 (India Standard Time), scoringStatus: 'pending', sourceId: '5688254707', source: 'adzuna', …}
+[INFO] Scoring job adzuna5688254707 using OpenAI...
+
+📊 [OpenAIResumeTailor] Token Usage (gpt-4o)
+   🧾 Prompt Tokens     : 3053
+   ✍️ Completion Tokens : 989
+   📦 Total Tokens      : 4042
+[INFO] Tailored Resume for job adzuna5706835417 using OpenAIResumeTailor
+[INFO] Saving tailored resume in JSON and DOCX formats...
+[INFO] Saving tailored resume metadata...
+[INFO] Saving tailored resume...
+[INFO] Saved tailored resume → /Users/karanshah/Documents/Documents/KaranMacBackup/Resume/job-autopilot/tailored-resumes/stolt_nielsen_digital_innovation_centre/india/senior_software_engineer_adzuna5706835417.json
+
+🎯 Save operation complete
+📄 Saved: /Users/karanshah/Documents/Documents/KaranMacBackup/Resume/job-autopilot/tailored-resumes/stolt_nielsen_digital_innovation_centre/india/senior_software_engineer_adzuna5706835417.json
+[INFO] Saving tailored resume as DOCX...
+[INFO] Saving Harvard-style resume...
+[INFO] Saved → /Users/karanshah/Documents/Documents/KaranMacBackup/Resume/job-autopilot/tailored-resumes/stolt_nielsen_digital_innovation_centre/india/senior_software_engineer_adzuna5706835417.docx
+
+🎯 DOCX save complete
+📄 Saved: /Users/karanshah/Documents/Documents/KaranMacBackup/Resume/job-autopilot/tailored-resumes/stolt_nielsen_digital_innovation_centre/india/senior_software_engineer_adzuna5706835417.docx
+[INFO] Both JSON and DOCX resumes saved successfully.
+✅ "Senior Software Engineer" → JSON: /Users/karanshah/Documents/Documents/KaranMacBackup/Resume/job-autopilot/tailored-resumes/stolt_nielsen_digital_innovation_centre/india/senior_software_engineer_adzuna5706835417.json, DOCX: /Users/karanshah/Documents/Documents/KaranMacBackup/Resume/job-autopilot/tailored-resumes/stolt_nielsen_digital_innovation_centre/india/senior_software_engineer_adzuna5706835417.docx
+[INFO] Lock acquired
+[INFO] Loaded 8 job IDs from /Users/karanshah/Documents/Documents/KaranMacBackup/Resume/job-autopilot/jobs_persistence.txt
+[INFO] Saved 9 job IDs to /Users/karanshah/Documents/Documents/KaranMacBackup/Resume/job-autopilot/jobs_persistence.txt
+[INFO] Lock released
+[INFO] Input job objects: {id: 'adzuna5688254800', fetchedAt: Sun Apr 26 2026 17:57:00 GMT+0530 (India Standard Time), scoringStatus: 'pending', sourceId: '5688254800', source: 'adzuna', …}
+[INFO] Scoring job adzuna5688254800 using OpenAI...
+
+📊 [OpenAI] Token Usage (gpt-4o-mini)
+   🧾 Prompt Tokens     : 2128
+   ✍️ Completion Tokens : 219
+   📦 Total Tokens      : 2347
+[INFO] Scored job adzuna5688254707 with score undefined using OpenAI
+⏭️ Skipped "Senior Software Engineer" (score: 75 < 80)
+[INFO] Input job objects: {id: 'adzuna5395623709', fetchedAt: Sun Apr 26 2026 17:57:00 GMT+0530 (India Standard Time), scoringStatus: 'pending', sourceId: '5395623709', source: 'adzuna', …}
+[INFO] Scoring job adzuna5395623709 using OpenAI...
+
+📊 [OpenAI] Token Usage (gpt-4o-mini)
+   🧾 Prompt Tokens     : 2133
+   ✍️ Completion Tokens : 221
+   📦 Total Tokens      : 2354
+[INFO] Scored job adzuna5688254800 with score undefined using OpenAI
+⏭️ Skipped "Senior Software Engineer" (score: 75 < 80)
+[INFO] Input job objects: {id: 'adzuna5688254744', fetchedAt: Sun Apr 26 2026 17:57:00 GMT+0530 (India Standard Time), scoringStatus: 'pending', sourceId: '5688254744', source: 'adzuna', …}
+[INFO] Scoring job adzuna5688254744 using OpenAI...
+
+📊 [OpenAI] Token Usage (gpt-4o-mini)
+   🧾 Prompt Tokens     : 2134
+   ✍️ Completion Tokens : 220
+   📦 Total Tokens      : 2354
+[INFO] Scored job adzuna5395623709 with score undefined using OpenAI
+[INFO] Tailoring Resume for job adzuna5395623709 using OpenAIResumeTailor...
+
+📊 [OpenAI] Token Usage (gpt-4o-mini)
+   🧾 Prompt Tokens     : 2130
+   ✍️ Completion Tokens : 208
+   📦 Total Tokens      : 2338
+[INFO] Scored job adzuna5688254744 with score undefined using OpenAI
+⏭️ Skipped "Senior Software Engineer" (score: 75 < 80)
+[INFO] Input job objects: {id: 'adzuna5688254785', fetchedAt: Sun Apr 26 2026 17:57:00 GMT+0530 (India Standard Time), scoringStatus: 'pending', sourceId: '5688254785', source: 'adzuna', …}
+[INFO] Scoring job adzuna5688254785 using OpenAI...
+
+📊 [OpenAIResumeTailor] Token Usage (gpt-4o)
+   🧾 Prompt Tokens     : 3047
+   ✍️ Completion Tokens : 912
+   📦 Total Tokens      : 3959
+[INFO] Tailored Resume for job adzuna5395623709 using OpenAIResumeTailor
+[INFO] Saving tailored resume in JSON and DOCX formats...
+[INFO] Saving tailored resume metadata...
+[INFO] Saving tailored resume...
+[INFO] Saved tailored resume → /Users/karanshah/Documents/Documents/KaranMacBackup/Resume/job-autopilot/tailored-resumes/costco/india/sr_software_engineer_adzuna5395623709.json
+
+🎯 Save operation complete
+📄 Saved: /Users/karanshah/Documents/Documents/KaranMacBackup/Resume/job-autopilot/tailored-resumes/costco/india/sr_software_engineer_adzuna5395623709.json
+[INFO] Saving tailored resume as DOCX...
+[INFO] Saving Harvard-style resume...
+[INFO] Saved → /Users/karanshah/Documents/Documents/KaranMacBackup/Resume/job-autopilot/tailored-resumes/costco/india/sr_software_engineer_adzuna5395623709.docx
+
+🎯 DOCX save complete
+📄 Saved: /Users/karanshah/Documents/Documents/KaranMacBackup/Resume/job-autopilot/tailored-resumes/costco/india/sr_software_engineer_adzuna5395623709.docx
+[INFO] Both JSON and DOCX resumes saved successfully.
+✅ "Sr. Software Engineer" → JSON: /Users/karanshah/Documents/Documents/KaranMacBackup/Resume/job-autopilot/tailored-resumes/costco/india/sr_software_engineer_adzuna5395623709.json, DOCX: /Users/karanshah/Documents/Documents/KaranMacBackup/Resume/job-autopilot/tailored-resumes/costco/india/sr_software_engineer_adzuna5395623709.docx
+[INFO] Lock acquired
+[INFO] Loaded 9 job IDs from /Users/karanshah/Documents/Documents/KaranMacBackup/Resume/job-autopilot/jobs_persistence.txt
+[INFO] Saved 10 job IDs to /Users/karanshah/Documents/Documents/KaranMacBackup/Resume/job-autopilot/jobs_persistence.txt
+[INFO] Lock released
+[INFO] Input job objects: {id: 'adzuna5680955770', fetchedAt: Sun Apr 26 2026 17:57:00 GMT+0530 (India Standard Time), scoringStatus: 'pending', sourceId: '5680955770', source: 'adzuna', …}
+[INFO] Scoring job adzuna5680955770 using OpenAI...
+
+📊 [OpenAI] Token Usage (gpt-4o-mini)
+   🧾 Prompt Tokens     : 2128
+   ✍️ Completion Tokens : 195
+   📦 Total Tokens      : 2323
+[INFO] Scored job adzuna5688254785 with score undefined using OpenAI
+⏭️ Skipped "Senior Software Engineer" (score: 65 < 80)
+[INFO] Input job objects: {id: 'adzuna5449748975', fetchedAt: Sun Apr 26 2026 17:57:01 GMT+0530 (India Standard Time), scoringStatus: 'pending', sourceId: '5449748975', source: 'adzuna', …}
+[INFO] Scoring job adzuna5449748975 using OpenAI...
+
+📊 [OpenAI] Token Usage (gpt-4o-mini)
+   🧾 Prompt Tokens     : 2131
+   ✍️ Completion Tokens : 220
+   📦 Total Tokens      : 2351
+[INFO] Scored job adzuna5680955770 with score undefined using OpenAI
+[INFO] Tailoring Resume for job adzuna5680955770 using OpenAIResumeTailor...
+
+📊 [OpenAI] Token Usage (gpt-4o-mini)
+   🧾 Prompt Tokens     : 2127
+   ✍️ Completion Tokens : 224
+   📦 Total Tokens      : 2351
+[INFO] Scored job adzuna5449748975 with score undefined using OpenAI
+[INFO] Tailoring Resume for job adzuna5449748975 using OpenAIResumeTailor...
+
+📊 [OpenAIResumeTailor] Token Usage (gpt-4o)
+   🧾 Prompt Tokens     : 3044
+   ✍️ Completion Tokens : 992
+   📦 Total Tokens      : 4036
+[INFO] Tailored Resume for job adzuna5680955770 using OpenAIResumeTailor
+[INFO] Saving tailored resume in JSON and DOCX formats...
+[INFO] Saving tailored resume metadata...
+[INFO] Saving tailored resume...
+[INFO] Saved tailored resume → /Users/karanshah/Documents/Documents/KaranMacBackup/Resume/job-autopilot/tailored-resumes/costco/india/senior_software_engineer_adzuna5680955770.json
+
+🎯 Save operation complete
+📄 Saved: /Users/karanshah/Documents/Documents/KaranMacBackup/Resume/job-autopilot/tailored-resumes/costco/india/senior_software_engineer_adzuna5680955770.json
+[INFO] Saving tailored resume as DOCX...
+[INFO] Saving Harvard-style resume...
+[INFO] Saved → /Users/karanshah/Documents/Documents/KaranMacBackup/Resume/job-autopilot/tailored-resumes/costco/india/senior_software_engineer_adzuna5680955770.docx
+
+🎯 DOCX save complete
+📄 Saved: /Users/karanshah/Documents/Documents/KaranMacBackup/Resume/job-autopilot/tailored-resumes/costco/india/senior_software_engineer_adzuna5680955770.docx
+[INFO] Both JSON and DOCX resumes saved successfully.
+✅ "Senior Software Engineer" → JSON: /Users/karanshah/Documents/Documents/KaranMacBackup/Resume/job-autopilot/tailored-resumes/costco/india/senior_software_engineer_adzuna5680955770.json, DOCX: /Users/karanshah/Documents/Documents/KaranMacBackup/Resume/job-autopilot/tailored-resumes/costco/india/senior_software_engineer_adzuna5680955770.docx
+[INFO] Lock acquired
+[INFO] Loaded 10 job IDs from /Users/karanshah/Documents/Documents/KaranMacBackup/Resume/job-autopilot/jobs_persistence.txt
+[INFO] Saved 11 job IDs to /Users/karanshah/Documents/Documents/KaranMacBackup/Resume/job-autopilot/jobs_persistence.txt
+[INFO] Lock released
+[INFO] Input job objects: {id: 'adzuna5004649693', fetchedAt: Sun Apr 26 2026 17:57:01 GMT+0530 (India Standard Time), scoringStatus: 'pending', sourceId: '5004649693', source: 'adzuna', …}
+[INFO] Scoring job adzuna5004649693 using OpenAI...
+
+📊 [OpenAIResumeTailor] Token Usage (gpt-4o)
+   🧾 Prompt Tokens     : 3047
+   ✍️ Completion Tokens : 954
+   📦 Total Tokens      : 4001
+[INFO] Tailored Resume for job adzuna5449748975 using OpenAIResumeTailor
+[INFO] Saving tailored resume in JSON and DOCX formats...
+[INFO] Saving tailored resume metadata...
+[INFO] Saving tailored resume...
+[INFO] Creating folder: /Users/karanshah/Documents/Documents/KaranMacBackup/Resume/job-autopilot/tailored-resumes/fm_india/india
+[INFO] Saved tailored resume → /Users/karanshah/Documents/Documents/KaranMacBackup/Resume/job-autopilot/tailored-resumes/fm_india/india/principal_software_engineer_adzuna5449748975.json
+
+🎯 Save operation complete
+📄 Saved: /Users/karanshah/Documents/Documents/KaranMacBackup/Resume/job-autopilot/tailored-resumes/fm_india/india/principal_software_engineer_adzuna5449748975.json
+[INFO] Saving tailored resume as DOCX...
+[INFO] Saving Harvard-style resume...
+[INFO] Saved → /Users/karanshah/Documents/Documents/KaranMacBackup/Resume/job-autopilot/tailored-resumes/fm_india/india/principal_software_engineer_adzuna5449748975.docx
+
+🎯 DOCX save complete
+📄 Saved: /Users/karanshah/Documents/Documents/KaranMacBackup/Resume/job-autopilot/tailored-resumes/fm_india/india/principal_software_engineer_adzuna5449748975.docx
+[INFO] Both JSON and DOCX resumes saved successfully.
+✅ "Principal Software Engineer" → JSON: /Users/karanshah/Documents/Documents/KaranMacBackup/Resume/job-autopilot/tailored-resumes/fm_india/india/principal_software_engineer_adzuna5449748975.json, DOCX: /Users/karanshah/Documents/Documents/KaranMacBackup/Resume/job-autopilot/tailored-resumes/fm_india/india/principal_software_engineer_adzuna5449748975.docx
+[INFO] Lock acquired
+[INFO] Loaded 11 job IDs from /Users/karanshah/Documents/Documents/KaranMacBackup/Resume/job-autopilot/jobs_persistence.txt
+[INFO] Saved 12 job IDs to /Users/karanshah/Documents/Documents/KaranMacBackup/Resume/job-autopilot/jobs_persistence.txt
+[INFO] Lock released
+[INFO] Input job objects: {id: 'adzuna5187969099', fetchedAt: Sun Apr 26 2026 17:57:01 GMT+0530 (India Standard Time), scoringStatus: 'pending', sourceId: '5187969099', source: 'adzuna', …}
+[INFO] Scoring job adzuna5187969099 using OpenAI...
+
+📊 [OpenAI] Token Usage (gpt-4o-mini)
+   🧾 Prompt Tokens     : 2130
+   ✍️ Completion Tokens : 231
+   📦 Total Tokens      : 2361
+[INFO] Scored job adzuna5004649693 with score undefined using OpenAI
+[INFO] Tailoring Resume for job adzuna5004649693 using OpenAIResumeTailor...
+
+📊 [OpenAI] Token Usage (gpt-4o-mini)
+   🧾 Prompt Tokens     : 2128
+   ✍️ Completion Tokens : 238
+   📦 Total Tokens      : 2366
+[INFO] Scored job adzuna5187969099 with score undefined using OpenAI
+[INFO] Tailoring Resume for job adzuna5187969099 using OpenAIResumeTailor...
+
+📊 [OpenAIResumeTailor] Token Usage (gpt-4o)
+   🧾 Prompt Tokens     : 3070
+   ✍️ Completion Tokens : 1047
+   📦 Total Tokens      : 4117
+[INFO] Tailored Resume for job adzuna5187969099 using OpenAIResumeTailor
+[INFO] Saving tailored resume in JSON and DOCX formats...
+[INFO] Saving tailored resume metadata...
+[INFO] Saving tailored resume...
+[INFO] Creating folder: /Users/karanshah/Documents/Documents/KaranMacBackup/Resume/job-autopilot/tailored-resumes/alkami/india
+[INFO] Saved tailored resume → /Users/karanshah/Documents/Documents/KaranMacBackup/Resume/job-autopilot/tailored-resumes/alkami/india/principal_software_engineer_-_tm_adzuna5187969099.json
+
+🎯 Save operation complete
+📄 Saved: /Users/karanshah/Documents/Documents/KaranMacBackup/Resume/job-autopilot/tailored-resumes/alkami/india/principal_software_engineer_-_tm_adzuna5187969099.json
+[INFO] Saving tailored resume as DOCX...
+[INFO] Saving Harvard-style resume...
+[INFO] Saved → /Users/karanshah/Documents/Documents/KaranMacBackup/Resume/job-autopilot/tailored-resumes/alkami/india/principal_software_engineer_-_tm_adzuna5187969099.docx
+
+🎯 DOCX save complete
+📄 Saved: /Users/karanshah/Documents/Documents/KaranMacBackup/Resume/job-autopilot/tailored-resumes/alkami/india/principal_software_engineer_-_tm_adzuna5187969099.docx
+[INFO] Both JSON and DOCX resumes saved successfully.
+✅ "Principal Software Engineer - TM" → JSON: /Users/karanshah/Documents/Documents/KaranMacBackup/Resume/job-autopilot/tailored-resumes/alkami/india/principal_software_engineer_-_tm_adzuna5187969099.json, DOCX: /Users/karanshah/Documents/Documents/KaranMacBackup/Resume/job-autopilot/tailored-resumes/alkami/india/principal_software_engineer_-_tm_adzuna5187969099.docx
+[INFO] Lock acquired
+[INFO] Loaded 12 job IDs from /Users/karanshah/Documents/Documents/KaranMacBackup/Resume/job-autopilot/jobs_persistence.txt
+[INFO] Saved 13 job IDs to /Users/karanshah/Documents/Documents/KaranMacBackup/Resume/job-autopilot/jobs_persistence.txt
+[INFO] Lock released
+[INFO] Input job objects: {id: 'adzuna4945949929', fetchedAt: Sun Apr 26 2026 17:57:01 GMT+0530 (India Standard Time), scoringStatus: 'pending', sourceId: '4945949929', source: 'adzuna', …}
+[INFO] Scoring job adzuna4945949929 using OpenAI...
+
+📊 [OpenAI] Token Usage (gpt-4o-mini)
+   🧾 Prompt Tokens     : 2147
+   ✍️ Completion Tokens : 212
+   📦 Total Tokens      : 2359
+[INFO] Scored job adzuna4945949929 with score undefined using OpenAI
+⏭️ Skipped "Senior Manager, Principal Software Engineer Finite Scheduling" (score: 75 < 80)
+[INFO] Input job objects: {id: 'adzuna5708449247', fetchedAt: Sun Apr 26 2026 17:57:01 GMT+0530 (India Standard Time), scoringStatus: 'pending', sourceId: '5708449247', source: 'adzuna', …}
+[INFO] Scoring job adzuna5708449247 using OpenAI...
+
+📊 [OpenAI] Token Usage (gpt-4o-mini)
+   🧾 Prompt Tokens     : 2134
+   ✍️ Completion Tokens : 217
+   📦 Total Tokens      : 2351
+[INFO] Scored job adzuna5708449247 with score undefined using OpenAI
+[INFO] Tailoring Resume for job adzuna5708449247 using OpenAIResumeTailor...
+
+📊 [OpenAIResumeTailor] Token Usage (gpt-4o)
+   🧾 Prompt Tokens     : 3065
+   ✍️ Completion Tokens : 944
+   📦 Total Tokens      : 4009
+[INFO] Tailored Resume for job adzuna5004649693 using OpenAIResumeTailor
+[INFO] Saving tailored resume in JSON and DOCX formats...
+[INFO] Saving tailored resume metadata...
+[INFO] Saving tailored resume...
+[INFO] Creating folder: /Users/karanshah/Documents/Documents/KaranMacBackup/Resume/job-autopilot/tailored-resumes/ansr_summit_consulting/india
+[INFO] Saved tailored resume → /Users/karanshah/Documents/Documents/KaranMacBackup/Resume/job-autopilot/tailored-resumes/ansr_summit_consulting/india/principal_software_engineer_adzuna5004649693.json
+
+🎯 Save operation complete
+📄 Saved: /Users/karanshah/Documents/Documents/KaranMacBackup/Resume/job-autopilot/tailored-resumes/ansr_summit_consulting/india/principal_software_engineer_adzuna5004649693.json
+[INFO] Saving tailored resume as DOCX...
+[INFO] Saving Harvard-style resume...
+[INFO] Saved → /Users/karanshah/Documents/Documents/KaranMacBackup/Resume/job-autopilot/tailored-resumes/ansr_summit_consulting/india/principal_software_engineer_adzuna5004649693.docx
+
+🎯 DOCX save complete
+📄 Saved: /Users/karanshah/Documents/Documents/KaranMacBackup/Resume/job-autopilot/tailored-resumes/ansr_summit_consulting/india/principal_software_engineer_adzuna5004649693.docx
+[INFO] Both JSON and DOCX resumes saved successfully.
+✅ "Principal Software Engineer" → JSON: /Users/karanshah/Documents/Documents/KaranMacBackup/Resume/job-autopilot/tailored-resumes/ansr_summit_consulting/india/principal_software_engineer_adzuna5004649693.json, DOCX: /Users/karanshah/Documents/Documents/KaranMacBackup/Resume/job-autopilot/tailored-resumes/ansr_summit_consulting/india/principal_software_engineer_adzuna5004649693.docx
+[INFO] Lock acquired
+[INFO] Loaded 13 job IDs from /Users/karanshah/Documents/Documents/KaranMacBackup/Resume/job-autopilot/jobs_persistence.txt
+[INFO] Saved 14 job IDs to /Users/karanshah/Documents/Documents/KaranMacBackup/Resume/job-autopilot/jobs_persistence.txt
+[INFO] Lock released
+[INFO] Input job objects: {id: 'adzuna4764141514', fetchedAt: Sun Apr 26 2026 17:57:01 GMT+0530 (India Standard Time), scoringStatus: 'pending', sourceId: '4764141514', source: 'adzuna', …}
+[INFO] Scoring job adzuna4764141514 using OpenAI...
+
+📊 [OpenAI] Token Usage (gpt-4o-mini)
+   🧾 Prompt Tokens     : 2154
+   ✍️ Completion Tokens : 206
+   📦 Total Tokens      : 2360
+[INFO] Scored job adzuna4764141514 with score undefined using OpenAI
+⏭️ Skipped "Senior Manager, Principal software Engineer Supply chain planning (SAP IBP & Kinaxis)" (score: 60 < 80)
+[INFO] Input job objects: {id: 'adzuna5604462180', fetchedAt: Sun Apr 26 2026 17:57:01 GMT+0530 (India Standard Time), scoringStatus: 'pending', sourceId: '5604462180', source: 'adzuna', …}
+[INFO] Scoring job adzuna5604462180 using OpenAI...
+
+📊 [OpenAIResumeTailor] Token Usage (gpt-4o)
+   🧾 Prompt Tokens     : 3069
+   ✍️ Completion Tokens : 1032
+   📦 Total Tokens      : 4101
+[INFO] Tailored Resume for job adzuna5708449247 using OpenAIResumeTailor
+[INFO] Saving tailored resume in JSON and DOCX formats...
+[INFO] Saving tailored resume metadata...
+[INFO] Saving tailored resume...
+[INFO] Creating folder: /Users/karanshah/Documents/Documents/KaranMacBackup/Resume/job-autopilot/tailored-resumes/dell_technologies/india
+[INFO] Saved tailored resume → /Users/karanshah/Documents/Documents/KaranMacBackup/Resume/job-autopilot/tailored-resumes/dell_technologies/india/principal_software_engineer-product_security_sdl_threat_modeling_adzuna5708449247.json
+
+🎯 Save operation complete
+📄 Saved: /Users/karanshah/Documents/Documents/KaranMacBackup/Resume/job-autopilot/tailored-resumes/dell_technologies/india/principal_software_engineer-product_security_sdl_threat_modeling_adzuna5708449247.json
+[INFO] Saving tailored resume as DOCX...
+[INFO] Saving Harvard-style resume...
+[INFO] Saved → /Users/karanshah/Documents/Documents/KaranMacBackup/Resume/job-autopilot/tailored-resumes/dell_technologies/india/principal_software_engineer-product_security_sdl_threat_modeling_adzuna5708449247.docx
+
+🎯 DOCX save complete
+📄 Saved: /Users/karanshah/Documents/Documents/KaranMacBackup/Resume/job-autopilot/tailored-resumes/dell_technologies/india/principal_software_engineer-product_security_sdl_threat_modeling_adzuna5708449247.docx
+[INFO] Both JSON and DOCX resumes saved successfully.
+✅ "Principal Software Engineer-Product Security, SDL & Threat Modeling" → JSON: /Users/karanshah/Documents/Documents/KaranMacBackup/Resume/job-autopilot/tailored-resumes/dell_technologies/india/principal_software_engineer-product_security_sdl_threat_modeling_adzuna5708449247.json, DOCX: /Users/karanshah/Documents/Documents/KaranMacBackup/Resume/job-autopilot/tailored-resumes/dell_technologies/india/principal_software_engineer-product_security_sdl_threat_modeling_adzuna5708449247.docx
+[INFO] Lock acquired
+[INFO] Loaded 14 job IDs from /Users/karanshah/Documents/Documents/KaranMacBackup/Resume/job-autopilot/jobs_persistence.txt
+[INFO] Saved 15 job IDs to /Users/karanshah/Documents/Documents/KaranMacBackup/Resume/job-autopilot/jobs_persistence.txt
+[INFO] Lock released
+[INFO] Input job objects: {id: 'adzuna5703563319', fetchedAt: Sun Apr 26 2026 17:57:01 GMT+0530 (India Standard Time), scoringStatus: 'pending', sourceId: '5703563319', source: 'adzuna', …}
+[INFO] Scoring job adzuna5703563319 using OpenAI...
+
+📊 [OpenAI] Token Usage (gpt-4o-mini)
+   🧾 Prompt Tokens     : 2125
+   ✍️ Completion Tokens : 206
+   📦 Total Tokens      : 2331
+[INFO] Scored job adzuna5604462180 with score undefined using OpenAI
+⏭️ Skipped "Principal Engineer, Software" (score: 75 < 80)
+[INFO] Input job objects: {id: 'adzuna5690364101', fetchedAt: Sun Apr 26 2026 17:57:01 GMT+0530 (India Standard Time), scoringStatus: 'pending', sourceId: '5690364101', source: 'adzuna', …}
+[INFO] Scoring job adzuna5690364101 using OpenAI...
+
+📊 [OpenAI] Token Usage (gpt-4o-mini)
+   🧾 Prompt Tokens     : 2130
+   ✍️ Completion Tokens : 209
+   📦 Total Tokens      : 2339
+[INFO] Scored job adzuna5703563319 with score undefined using OpenAI
+⏭️ Skipped "Principal Engineer" (score: 75 < 80)
+[INFO] Input job objects: {id: 'adzuna5709410276', fetchedAt: Sun Apr 26 2026 17:57:01 GMT+0530 (India Standard Time), scoringStatus: 'pending', sourceId: '5709410276', source: 'adzuna', …}
+[INFO] Scoring job adzuna5709410276 using OpenAI...
+
+📊 [OpenAI] Token Usage (gpt-4o-mini)
+   🧾 Prompt Tokens     : 2142
+   ✍️ Completion Tokens : 238
+   📦 Total Tokens      : 2380
+[INFO] Scored job adzuna5690364101 with score undefined using OpenAI
+[INFO] Tailoring Resume for job adzuna5690364101 using OpenAIResumeTailor...
+
+📊 [OpenAI] Token Usage (gpt-4o-mini)
+   🧾 Prompt Tokens     : 2129
+   ✍️ Completion Tokens : 242
+   📦 Total Tokens      : 2371
+[INFO] Scored job adzuna5709410276 with score undefined using OpenAI
+[INFO] Tailoring Resume for job adzuna5709410276 using OpenAIResumeTailor...
+
+📊 [OpenAIResumeTailor] Token Usage (gpt-4o)
+   🧾 Prompt Tokens     : 3057
+   ✍️ Completion Tokens : 1036
+   📦 Total Tokens      : 4093
+[INFO] Tailored Resume for job adzuna5690364101 using OpenAIResumeTailor
+[INFO] Saving tailored resume in JSON and DOCX formats...
+[INFO] Saving tailored resume metadata...
+[INFO] Saving tailored resume...
+[INFO] Creating folder: /Users/karanshah/Documents/Documents/KaranMacBackup/Resume/job-autopilot/tailored-resumes/clari/india
+[INFO] Saved tailored resume → /Users/karanshah/Documents/Documents/KaranMacBackup/Resume/job-autopilot/tailored-resumes/clari/india/principal_engineer_adzuna5690364101.json
+
+🎯 Save operation complete
+📄 Saved: /Users/karanshah/Documents/Documents/KaranMacBackup/Resume/job-autopilot/tailored-resumes/clari/india/principal_engineer_adzuna5690364101.json
+[INFO] Saving tailored resume as DOCX...
+[INFO] Saving Harvard-style resume...
+[INFO] Saved → /Users/karanshah/Documents/Documents/KaranMacBackup/Resume/job-autopilot/tailored-resumes/clari/india/principal_engineer_adzuna5690364101.docx
+
+🎯 DOCX save complete
+📄 Saved: /Users/karanshah/Documents/Documents/KaranMacBackup/Resume/job-autopilot/tailored-resumes/clari/india/principal_engineer_adzuna5690364101.docx
+[INFO] Both JSON and DOCX resumes saved successfully.
+✅ "Principal Engineer" → JSON: /Users/karanshah/Documents/Documents/KaranMacBackup/Resume/job-autopilot/tailored-resumes/clari/india/principal_engineer_adzuna5690364101.json, DOCX: /Users/karanshah/Documents/Documents/KaranMacBackup/Resume/job-autopilot/tailored-resumes/clari/india/principal_engineer_adzuna5690364101.docx
+[INFO] Lock acquired
+[INFO] Loaded 15 job IDs from /Users/karanshah/Documents/Documents/KaranMacBackup/Resume/job-autopilot/jobs_persistence.txt
+[INFO] Saved 16 job IDs to /Users/karanshah/Documents/Documents/KaranMacBackup/Resume/job-autopilot/jobs_persistence.txt
+[INFO] Lock released
+[INFO] Input job objects: {id: 'adzuna5695188071', fetchedAt: Sun Apr 26 2026 17:57:01 GMT+0530 (India Standard Time), scoringStatus: 'pending', sourceId: '5695188071', source: 'adzuna', …}
+[INFO] Scoring job adzuna5695188071 using OpenAI...
+
+📊 [OpenAIResumeTailor] Token Usage (gpt-4o)
+   🧾 Prompt Tokens     : 3080
+   ✍️ Completion Tokens : 1036
+   📦 Total Tokens      : 4116
+[INFO] Tailored Resume for job adzuna5709410276 using OpenAIResumeTailor
+[INFO] Saving tailored resume in JSON and DOCX formats...
+[INFO] Saving tailored resume metadata...
+[INFO] Saving tailored resume...
+[INFO] Creating folder: /Users/karanshah/Documents/Documents/KaranMacBackup/Resume/job-autopilot/tailored-resumes/eurofins_gsc_it_dc/india
+[INFO] Saved tailored resume → /Users/karanshah/Documents/Documents/KaranMacBackup/Resume/job-autopilot/tailored-resumes/eurofins_gsc_it_dc/india/principal_software_engineer_adzuna5709410276.json
+
+🎯 Save operation complete
+📄 Saved: /Users/karanshah/Documents/Documents/KaranMacBackup/Resume/job-autopilot/tailored-resumes/eurofins_gsc_it_dc/india/principal_software_engineer_adzuna5709410276.json
+[INFO] Saving tailored resume as DOCX...
+[INFO] Saving Harvard-style resume...
+[INFO] Saved → /Users/karanshah/Documents/Documents/KaranMacBackup/Resume/job-autopilot/tailored-resumes/eurofins_gsc_it_dc/india/principal_software_engineer_adzuna5709410276.docx
+
+🎯 DOCX save complete
+📄 Saved: /Users/karanshah/Documents/Documents/KaranMacBackup/Resume/job-autopilot/tailored-resumes/eurofins_gsc_it_dc/india/principal_software_engineer_adzuna5709410276.docx
+[INFO] Both JSON and DOCX resumes saved successfully.
+✅ "Principal Software Engineer" → JSON: /Users/karanshah/Documents/Documents/KaranMacBackup/Resume/job-autopilot/tailored-resumes/eurofins_gsc_it_dc/india/principal_software_engineer_adzuna5709410276.json, DOCX: /Users/karanshah/Documents/Documents/KaranMacBackup/Resume/job-autopilot/tailored-resumes/eurofins_gsc_it_dc/india/principal_software_engineer_adzuna5709410276.docx
+[INFO] Lock acquired
+[INFO] Loaded 16 job IDs from /Users/karanshah/Documents/Documents/KaranMacBackup/Resume/job-autopilot/jobs_persistence.txt
+[INFO] Saved 17 job IDs to /Users/karanshah/Documents/Documents/KaranMacBackup/Resume/job-autopilot/jobs_persistence.txt
+[INFO] Lock released
+[INFO] Input job objects: {id: 'adzuna5678602902', fetchedAt: Sun Apr 26 2026 17:57:01 GMT+0530 (India Standard Time), scoringStatus: 'pending', sourceId: '5678602902', source: 'adzuna', …}
+[INFO] Scoring job adzuna5678602902 using OpenAI...
+
+📊 [OpenAI] Token Usage (gpt-4o-mini)
+   🧾 Prompt Tokens     : 2134
+   ✍️ Completion Tokens : 215
+   📦 Total Tokens      : 2349
+[INFO] Scored job adzuna5695188071 with score undefined using OpenAI
+⏭️ Skipped "Principal Software Engineer" (score: 45 < 80)
+[INFO] Input job objects: {id: 'adzuna5171459128', fetchedAt: Sun Apr 26 2026 17:57:01 GMT+0530 (India Standard Time), scoringStatus: 'pending', sourceId: '5171459128', source: 'adzuna', …}
+[INFO] Scoring job adzuna5171459128 using OpenAI...
+
+📊 [OpenAI] Token Usage (gpt-4o-mini)
+   🧾 Prompt Tokens     : 2117
+   ✍️ Completion Tokens : 220
+   📦 Total Tokens      : 2337
+[INFO] Scored job adzuna5678602902 with score undefined using OpenAI
+[INFO] Tailoring Resume for job adzuna5678602902 using OpenAIResumeTailor...
+
+📊 [OpenAI] Token Usage (gpt-4o-mini)
+   🧾 Prompt Tokens     : 2140
+   ✍️ Completion Tokens : 221
+   📦 Total Tokens      : 2361
+[INFO] Scored job adzuna5171459128 with score undefined using OpenAI
+⏭️ Skipped "Principal Software Engineer" (score: 35 < 80)
+[INFO] Input job objects: {id: 'adzuna5698600238', fetchedAt: Sun Apr 26 2026 17:57:01 GMT+0530 (India Standard Time), scoringStatus: 'pending', sourceId: '5698600238', source: 'adzuna', …}
+[INFO] Scoring job adzuna5698600238 using OpenAI...
+
+📊 [OpenAI] Token Usage (gpt-4o-mini)
+   🧾 Prompt Tokens     : 2133
+   ✍️ Completion Tokens : 222
+   📦 Total Tokens      : 2355
+[INFO] Scored job adzuna5698600238 with score undefined using OpenAI
+⏭️ Skipped "Principal Software Engineer" (score: 75 < 80)
+[INFO] Input job objects: {id: 'adzuna5653961970', fetchedAt: Sun Apr 26 2026 17:57:01 GMT+0530 (India Standard Time), scoringStatus: 'pending', sourceId: '5653961970', source: 'adzuna', …}
+[INFO] Scoring job adzuna5653961970 using OpenAI...
+
+📊 [OpenAIResumeTailor] Token Usage (gpt-4o)
+   🧾 Prompt Tokens     : 3061
+   ✍️ Completion Tokens : 940
+   📦 Total Tokens      : 4001
+[INFO] Tailored Resume for job adzuna5678602902 using OpenAIResumeTailor
+[INFO] Saving tailored resume in JSON and DOCX formats...
+[INFO] Saving tailored resume metadata...
+[INFO] Saving tailored resume...
+[INFO] Saved tailored resume → /Users/karanshah/Documents/Documents/KaranMacBackup/Resume/job-autopilot/tailored-resumes/eurofins_gsc_it_dc/india/principal_software_engineer_adzuna5678602902.json
+
+🎯 Save operation complete
+📄 Saved: /Users/karanshah/Documents/Documents/KaranMacBackup/Resume/job-autopilot/tailored-resumes/eurofins_gsc_it_dc/india/principal_software_engineer_adzuna5678602902.json
+[INFO] Saving tailored resume as DOCX...
+[INFO] Saving Harvard-style resume...
+[INFO] Saved → /Users/karanshah/Documents/Documents/KaranMacBackup/Resume/job-autopilot/tailored-resumes/eurofins_gsc_it_dc/india/principal_software_engineer_adzuna5678602902.docx
+
+🎯 DOCX save complete
+📄 Saved: /Users/karanshah/Documents/Documents/KaranMacBackup/Resume/job-autopilot/tailored-resumes/eurofins_gsc_it_dc/india/principal_software_engineer_adzuna5678602902.docx
+[INFO] Both JSON and DOCX resumes saved successfully.
+✅ "Principal Software Engineer" → JSON: /Users/karanshah/Documents/Documents/KaranMacBackup/Resume/job-autopilot/tailored-resumes/eurofins_gsc_it_dc/india/principal_software_engineer_adzuna5678602902.json, DOCX: /Users/karanshah/Documents/Documents/KaranMacBackup/Resume/job-autopilot/tailored-resumes/eurofins_gsc_it_dc/india/principal_software_engineer_adzuna5678602902.docx
+[INFO] Lock acquired
+[INFO] Loaded 17 job IDs from /Users/karanshah/Documents/Documents/KaranMacBackup/Resume/job-autopilot/jobs_persistence.txt
+[INFO] Saved 18 job IDs to /Users/karanshah/Documents/Documents/KaranMacBackup/Resume/job-autopilot/jobs_persistence.txt
+[INFO] Lock released
+
+📊 [OpenAI] Token Usage (gpt-4o-mini)
+   🧾 Prompt Tokens     : 2139
+   ✍️ Completion Tokens : 218
+   📦 Total Tokens      : 2357
+[INFO] Scored job adzuna5653961970 with score undefined using OpenAI
+[INFO] Tailoring Resume for job adzuna5653961970 using OpenAIResumeTailor...
+
+📊 [OpenAIResumeTailor] Token Usage (gpt-4o)
+   🧾 Prompt Tokens     : 3050
+   ✍️ Completion Tokens : 997
+   📦 Total Tokens      : 4047
+[INFO] Tailored Resume for job adzuna5653961970 using OpenAIResumeTailor
+[INFO] Saving tailored resume in JSON and DOCX formats...
+[INFO] Saving tailored resume metadata...
+[INFO] Saving tailored resume...
+[INFO] Creating folder: /Users/karanshah/Documents/Documents/KaranMacBackup/Resume/job-autopilot/tailored-resumes/commonwealth_bank_of_australia/india
+[INFO] Saved tailored resume → /Users/karanshah/Documents/Documents/KaranMacBackup/Resume/job-autopilot/tailored-resumes/commonwealth_bank_of_australia/india/principal_software_engineer_adzuna5653961970.json
+
+🎯 Save operation complete
+📄 Saved: /Users/karanshah/Documents/Documents/KaranMacBackup/Resume/job-autopilot/tailored-resumes/commonwealth_bank_of_australia/india/principal_software_engineer_adzuna5653961970.json
+[INFO] Saving tailored resume as DOCX...
+[INFO] Saving Harvard-style resume...
+[INFO] Saved → /Users/karanshah/Documents/Documents/KaranMacBackup/Resume/job-autopilot/tailored-resumes/commonwealth_bank_of_australia/india/principal_software_engineer_adzuna5653961970.docx
+
+🎯 DOCX save complete
+📄 Saved: /Users/karanshah/Documents/Documents/KaranMacBackup/Resume/job-autopilot/tailored-resumes/commonwealth_bank_of_australia/india/principal_software_engineer_adzuna5653961970.docx
+[INFO] Both JSON and DOCX resumes saved successfully.
+✅ "Principal Software Engineer" → JSON: /Users/karanshah/Documents/Documents/KaranMacBackup/Resume/job-autopilot/tailored-resumes/commonwealth_bank_of_australia/india/principal_software_engineer_adzuna5653961970.json, DOCX: /Users/karanshah/Documents/Documents/KaranMacBackup/Resume/job-autopilot/tailored-resumes/commonwealth_bank_of_australia/india/principal_software_engineer_adzuna5653961970.docx
+[INFO] Lock acquired
+[INFO] Loaded 18 job IDs from /Users/karanshah/Documents/Documents/KaranMacBackup/Resume/job-autopilot/jobs_persistence.txt
+[INFO] Saved 19 job IDs to /Users/karanshah/Documents/Documents/KaranMacBackup/Resume/job-autopilot/jobs_persistence.txt
+[INFO] Lock released
+
+🎯 Processing complete
+✅ Successful: 17
+⏭️ Skipped: 12
+❌ Failed: 0
+✅ Adzuna jobs processing complete

@@ -1,0 +1,8 @@
+{
+  "persistenceFilePath": "/Users/karanshah/Documents/Documents/KaranMacBackup/Resume/job-autopilot/jobs_persistence.txt",
+  "manualJobsJSONFilePath": "/Users/karanshah/Documents/Documents/KaranMacBackup/Resume/job-autopilot/ManualJobs.json",
+  "manualTailoredResumeJSONFilePath": "/Users/karanshah/Documents/Documents/KaranMacBackup/Resume/job-autopilot/ManualTailoredResume.json",
+  "tailoredResumeOutputDirectory": "/Users/karanshah/Documents/Documents/KaranMacBackup/Resume/job-autopilot/tailored-resumes",
+  "processManualJobsOnly": true,
+  "saveTailoredResumeOnly": true
+}
