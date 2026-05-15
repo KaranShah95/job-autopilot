@@ -148,9 +148,3 @@ Software Engineer focused on:
 - Developer productivity tooling
 
 GitHub: https://github.com/KaranShah95
-
----
-
-## License
-
-MIT
